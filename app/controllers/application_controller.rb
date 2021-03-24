@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
     Rails.logger.info "---------------- request ------------------"
     Rails.logger.info params.inspect
     Rails.logger.info "---------------  end ---------------------"
-    render plain: :ok
+    render plain: "OK", layout: false
   end
 end
