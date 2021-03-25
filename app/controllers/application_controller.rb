@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
     Rails.logger.info "---------------  end ---------------------"
     if params[:res_tracking_id]
       receipts = Rails.cache.read(:receipts) || []
-      receipts.push params.to_h
+      receipts.push params.permit(:cust_code, :order_id, :res_tracking_id, :sps_hashcode).to_h
       Rails.cache.write(:receipts, receipts)
     end
     render plain: "OK", layout: false
