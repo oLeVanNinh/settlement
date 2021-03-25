@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
     render plain: "OK", layout: false
   end
 
-  def receipts
+  def receipt
     @receipts = Rails.cache.read(:receipts) || []
     render "receipts/index"
   end
