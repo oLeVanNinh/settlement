@@ -12,7 +12,6 @@ class ApplicationController < ActionController::Base
         Rails.cache.write(:receipts, receipts)
       end
     end
-    sleep 10
     render plain: "OK", layout: false
   end
 
