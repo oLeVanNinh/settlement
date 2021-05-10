@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
         Rails.cache.write(:receipts, receipts)
       end
     end
-    render plain: "OK", layout: false
+    render plain: "EK", layout: false
   end
 
   def receipt
