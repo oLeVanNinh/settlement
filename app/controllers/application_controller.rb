@@ -12,8 +12,7 @@ class ApplicationController < ActionController::Base
         Rails.cache.write(:receipts, receipts)
       end
     end
-    raise StandardError
-    render plain: "EK", layout: false
+    render plain: "OK", layout: false
   end
 
   def receipt
